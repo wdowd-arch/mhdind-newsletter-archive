@@ -5,73 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Marblehead Independent - Newsletter Archive</title>
     <style>
+        :root {
+            --independent-red: #C2261D;
+            --harbor-black: #1E1F21;
+            --shell-white: #FDF9F4;
+            --slate-blue: #375E97;
+            --line-color: #D8CEC4;
+            --card-white: #FFFDFC;
+        }
         * {
             box-sizing: border-box;
         }
         body {
             font-family: Georgia, "Times New Roman", serif;
             line-height: 1.6;
-            max-width: 800px;
+            margin: 0;
+            padding: 0;
+            background: var(--shell-white);
+            color: var(--harbor-black);
+        }
+        .page {
+            max-width: 880px;
             margin: 0 auto;
-            padding: 2rem;
-            background: #fafafa;
-            color: #333;
+            padding: 3rem 1.5rem 4rem;
+        }
+        header {
+            border-bottom: 1px solid var(--line-color);
+            margin-bottom: 2rem;
+            padding-bottom: 1.25rem;
         }
         h1 {
-            color: #1a1a1a;
-            border-bottom: 3px solid #2c5282;
-            padding-bottom: 0.5rem;
-            margin-bottom: 0.5rem;
+            margin: 0;
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            line-height: 0.95;
+            font-weight: 400;
+            letter-spacing: -0.03em;
+        }
+        .nameplate-top {
+            display: block;
+            color: var(--harbor-black);
+        }
+        .nameplate-bottom {
+            display: block;
+            color: var(--independent-red);
+            font-size: 0.82em;
+            font-weight: 700;
+            letter-spacing: 0.08em;
         }
         .subtitle {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
+            color: var(--harbor-black);
+            font-size: 1rem;
+            margin: 0.85rem 0 0;
+            max-width: 42rem;
         }
         .issue-list {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
         .issue-item {
-            background: #fff;
+            background: var(--card-white);
             margin-bottom: 1rem;
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            transition: box-shadow 0.2s ease;
+            padding: 1.15rem 1.35rem;
+            border: 1px solid var(--line-color);
+            border-radius: 2px;
+            transition: border-color 0.2s ease, transform 0.2s ease;
         }
         .issue-item:hover {
-            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            border-color: var(--slate-blue);
+            transform: translateY(-1px);
         }
         .issue-date {
-            font-size: 0.85rem;
-            color: #666;
+            font-size: 0.83rem;
+            color: var(--harbor-black);
             font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
         }
         .issue-link {
             display: block;
-            color: #2c5282;
+            color: var(--harbor-black);
             text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin-top: 0.25rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 0.35rem;
         }
         .issue-link:hover {
-            color: #1a365d;
+            color: var(--slate-blue);
             text-decoration: underline;
         }
         footer {
             margin-top: 3rem;
             padding-top: 1rem;
-            border-top: 1px solid #ddd;
-            color: #666;
+            border-top: 1px solid var(--line-color);
+            color: var(--harbor-black);
             font-size: 0.9rem;
+        }
+        @media (max-width: 640px) {
+            .page {
+                padding: 2rem 1rem 3rem;
+            }
+            .issue-item {
+                padding: 1rem 1rem 1.1rem;
+            }
+            .issue-link {
+                font-size: 1.08rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>The Marblehead Independent</h1>
-    <p class="subtitle">Newsletter Archive - 29 Issues</p>
+    <div class="page">
+    <header>
+        <h1><span class="nameplate-top">The Marblehead</span><span class="nameplate-bottom">INDEPENDENT</span></h1>
+        <p class="subtitle">Newsletter Archive. 29 issues preserved in reverse chronological order.</p>
+    </header>
 
     <ul class="issue-list">
         <li class="issue-item">
@@ -193,7 +241,8 @@
     </ul>
 
     <footer>
-        <p>Archive of The Marblehead Independent newsletter issues from September 2025 to March 2026.</p>
+        <p>Archive of The Marblehead Independent newsletter issues from September 2025 to April 2026.</p>
     </footer>
+    </div>
 </body>
 </html>
