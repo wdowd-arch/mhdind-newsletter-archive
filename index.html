@@ -35,6 +35,15 @@
             padding-bottom: 1.25rem;
             text-align: center;
         }
+        .nameplate-link {
+            color: inherit;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .nameplate-link:hover .nameplate-top,
+        .nameplate-link:hover .nameplate-bottom {
+            text-decoration: underline;
+        }
         h1 {
             margin: 0;
             font-size: clamp(2.4rem, 5vw, 4rem);
@@ -120,7 +129,7 @@
 <body>
     <div class="page">
     <header>
-        <h1><span class="nameplate-top">The Marblehead</span><span class="nameplate-bottom">INDEPENDENT</span></h1>
+        <h1><a class="nameplate-link" href="https://wdowd-arch.github.io/mhdind-newsletter-archive/"><span class="nameplate-top">The Marblehead</span><span class="nameplate-bottom">INDEPENDENT</span></a></h1>
         <p class="subtitle">Newsletter Archive. 31 issues preserved in reverse chronological order.</p>
     </header>
 
